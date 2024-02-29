@@ -32,6 +32,9 @@
 ### Multi-Language Support
 `✔️ Autoshorts supports videos in any language, ensuring global appeal and accessibility.`
 
+### Clips Library
+`✔️Access your processed clips in the Clips Library. Download them, schedule uploads to your favourite socials, and view comprehensive information such as virality score to track their performance.`
+
 ## Frequently Asked Questions 🤔
 
 ### What kind of videos are supported?
