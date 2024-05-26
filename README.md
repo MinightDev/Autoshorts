@@ -39,7 +39,11 @@ Autoshorts work on all videos. Such as: podcasts, interviews, educational videos
 - **Access, download, and schedule uploads**: Directly manage your processed clips and schedule uploads to your favorite social media platforms.
 - **Support System**: Get help when you need it with our dedicated support system. Submit tickets and directly contact the team for assistance.
 
-Visit our website for more information: [Autoshorts.com](https://www.autoshorts.com).
+## ❓ Interested in the project?
+---
+- Contact me: onlyayoub565@gmail.com or ayoub@starsky.pro
+---
+
 
 ## ❓ Frequently Asked Questions
 
@@ -93,9 +97,4 @@ Absolutely, you can cancel your subscription at any time. You'll retain access t
 ## 👨‍💻 Author
 ---
 - **Ayoub Baalla**
----
-
-## ❓ Interested in the project?
----
-- Contact me: onlyayoub565@gmail.com or ayoub@starsky.pro
 ---
