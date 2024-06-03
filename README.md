@@ -95,8 +95,8 @@ Absolutely, you can cancel your subscription at any time. You'll retain access t
 - More to come soon!
 
 ## 🌐 Demo
-Video: https://youtu.be/FzMEaCngnkU (The website shown in the video is missing some features that were recently added)
-Website: autoshorts.com (currently offline)
+- Video: https://youtu.be/FzMEaCngnkU (The website shown in the video is missing some features that were recently added)
+- Website: autoshorts.com (currently offline)
 
 ## 👨‍💻 Author
 ---
