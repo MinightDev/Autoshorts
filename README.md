@@ -41,7 +41,7 @@
 
 ## ❓ Interested in the project?
 ---
-- Contact me: onlyayoub565@gmail.com or ayoub@starsky.pro
+- Contact us: onlyayoub565@gmail.com or simarjeet@galaxyrealestate.co.uk
 ---
 
 
