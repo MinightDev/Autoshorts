@@ -1,7 +1,7 @@
 # Autoshorts AI 🎞️✂️
 
 <p align="center">
-  <img src="https://cdn.discordapp.com/attachments/1050165602813231174/1290250515694751784/Add_a_heading_1.png?ex=66fbc6ee&is=66fa756e&hm=0d1e068278cf76e20ddf817807fd51405058b56122051a262b017de42346f833&" alt="Autoshorts logo" width="400">
+  <img src="https://media.discordapp.net/attachments/1309203496851214387/1335969891181793364/watermark.png?ex=67a21a6b&is=67a0c8eb&hm=655dfaa9a6979cfe0c1aab454815a238645704071d02873568049dd619c51797&=&format=webp&quality=lossless&width=731&height=366" alt="Autoshorts logo" width="400">
 </p>
 
 - Autoshorts AI transforms long videos into engaging viral shorts using the power of artificial intelligence. It analyzes video content, identifying key topics or moments likely to interest viewers. It then automatically generates shorts based on these topics. with effects, animations, captions, face tracking, background music, virality scores, and much more.
