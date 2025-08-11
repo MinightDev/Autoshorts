@@ -37,7 +37,7 @@
 
 ## ❓ Interested in the project?
 ---
-- Contact us: ayoub@starsky.app
+- Contact us: team@monzed.com
 ---
 
 
