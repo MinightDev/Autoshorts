@@ -104,9 +104,11 @@ Captions are the most critical element for social media retention.
 ### 5. Professional Audio (`AudioConfig`)
 *   **`voiceover_volume`**: Boost or normalize original speaker audio.
 *   **`background_music`**:
-    *   `source_url`: Audio link (.mp3).
+    *   **`source_url`**: Audio link (.mp3) or set to **`"auto"`** to let AI choose music based on content vibe.
     *   `volume`: 0.0 to 1.0 (Auto-ducking is enabled by default).
     *   `loop`: Seamless looping of tracks.
+*   > [!IMPORTANT]
+    > **Audio Limit**: For system stability, all background audio downloads (YouTube or Direct) are restricted to a maximum duration of **10 minutes**. Tracks exceeding this will be rejected.
 
 ### 6. Integration Features
 *   **`webhook_url`**: Receive a JSON POST payload when the job is done. Perfect for building automated SaaS pipelines.

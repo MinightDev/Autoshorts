@@ -743,22 +743,55 @@ export default function Playground({ user, onLogout }: PlaygroundProps) {
                                 </div>
 
                                 <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-6">
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-8 h-8 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600">
-                                            <Music className="w-4 h-4" />
+                                    <div className="flex items-center justify-between">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-8 h-8 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600">
+                                                <Music className="w-4 h-4" />
+                                            </div>
+                                            <span className="text-xs font-bold text-slate-900 uppercase tracking-tight">Background Music</span>
                                         </div>
-                                        <span className="text-xs font-bold text-slate-900 uppercase tracking-tight">Background Music</span>
+                                        <Button
+                                            variant="outline"
+                                            size="sm"
+                                            onClick={() => setBgMusicUrl(bgMusicUrl === 'auto' ? '' : 'auto')}
+                                            className={`h-8 px-3 rounded-xl text-[10px] font-bold gap-2 transition-all ${bgMusicUrl === 'auto'
+                                                ? 'bg-primary text-white border-primary shadow-lg shadow-primary/20'
+                                                : 'text-primary border-primary/20 hover:bg-primary/5'
+                                                }`}
+                                        >
+                                            <Sparkles className={`w-3 h-3 ${bgMusicUrl === 'auto' ? 'animate-pulse' : ''}`} />
+                                            {bgMusicUrl === 'auto' ? 'AI Choosing' : 'AI Choose'}
+                                        </Button>
                                     </div>
 
                                     <div className="space-y-3">
-                                        <Label className="text-[10px] font-bold text-slate-400 uppercase">Music URL (.mp3)</Label>
-                                        <p className="text-[9px] text-slate-400 font-medium leading-tight">Overlay custom music. The engine will auto-duck the volume during speech.</p>
-                                        <Input
-                                            placeholder="Paste direct audio link"
-                                            value={bgMusicUrl}
-                                            onChange={(e) => setBgMusicUrl(e.target.value)}
-                                            className="h-11 bg-slate-50 border-slate-200 text-sm rounded-xl"
-                                        />
+                                        <Label className="text-[10px] font-bold text-slate-400 uppercase">
+                                            {bgMusicUrl === 'auto' ? 'Automated Selection' : 'Music URL (.mp3)'}
+                                        </Label>
+                                        <p className="text-[9px] text-slate-400 font-medium leading-tight">
+                                            {bgMusicUrl === 'auto'
+                                                ? "Engine will analyze your content's vibe and search for the perfect matching soundtrack."
+                                                : "Overlay custom music. The engine will auto-duck the volume during speech."}
+                                        </p>
+
+                                        {bgMusicUrl === 'auto' ? (
+                                            <div className="p-4 rounded-2xl bg-primary/5 border border-primary/10 flex items-center gap-4 animate-in fade-in zoom-in-95">
+                                                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                                                    <Sparkles className="w-5 h-5 text-primary animate-pulse" />
+                                                </div>
+                                                <div className="space-y-0.5">
+                                                    <p className="text-[11px] font-bold text-primary uppercase tracking-tight">✨ Letting AI Choose</p>
+                                                    <p className="text-[9px] text-primary/60 font-medium italic">Gemini will find a matching vibe...</p>
+                                                </div>
+                                            </div>
+                                        ) : (
+                                            <Input
+                                                placeholder="Paste direct audio link"
+                                                value={bgMusicUrl}
+                                                onChange={(e) => setBgMusicUrl(e.target.value)}
+                                                className="h-11 bg-slate-50 border-slate-200 text-sm rounded-xl"
+                                            />
+                                        )}
                                     </div>
 
                                     {bgMusicUrl && (
@@ -1052,10 +1085,10 @@ export default function Playground({ user, onLogout }: PlaygroundProps) {
                     </div>
 
                 </div>
-            </main>
+            </main >
 
             {/* Professional Footer */}
-            <footer className="border-t border-slate-200 bg-white py-10 mt-10">
+            < footer className="border-t border-slate-200 bg-white py-10 mt-10" >
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                         <div className="flex items-center gap-12">
@@ -1080,8 +1113,8 @@ export default function Playground({ user, onLogout }: PlaygroundProps) {
                         </div>
                     </div>
                 </div>
-            </footer>
+            </footer >
 
-        </div>
+        </div >
     );
 }
