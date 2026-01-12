@@ -781,7 +781,7 @@ export default function Playground({ user, onLogout }: PlaygroundProps) {
                                                 </div>
                                                 <div className="space-y-0.5">
                                                     <p className="text-[11px] font-bold text-primary uppercase tracking-tight">✨ Letting AI Choose</p>
-                                                    <p className="text-[9px] text-primary/60 font-medium italic">Gemini will find a matching vibe...</p>
+                                                    <p className="text-[9px] text-primary/60 font-medium italic">AI will find a matching vibe...</p>
                                                 </div>
                                             </div>
                                         ) : (
