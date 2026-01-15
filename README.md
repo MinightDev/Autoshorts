@@ -15,10 +15,17 @@
 
 Experience the transformation quality. Our AI doesn't just cut—it curates, reframes, and enhances.
 
+### ⚡ Featured Transformation
 | 🔴 SOURCE (UNEDITED) | 🟢 RESULT (OPTIMIZED) |
 |:---:|:---:|
+| [![Before Video](https://img.youtube.com/vi/8JoTw_JuE78/0.jpg)](https://youtu.be/8JoTw_JuE78) | [![After Video](https://img.youtube.com/vi/O6bcEQ0UGHg/0.jpg)](https://youtu.be/O6bcEQ0UGHg) |
+| *Original technical lecture.* | *High-impact viral short.* |
+
+### 🚀 Additional Examples
+| 🔴 SOURCE (UNEDITED) | 🟢 RESULT (OPTIMIZED) |
+|:---:|:---:|
+| [![Before Video](https://img.youtube.com/vi/8JoTw_JuE78/0.jpg)](https://youtu.be/8JoTw_JuE78) | [![After Video](https://img.youtube.com/vi/O6bcEQ0UGHg/0.jpg)](https://youtu.be/O6bcEQ0UGHg) |
 | [![Before Video](https://img.youtube.com/vi/gV6hP9wpMW8/0.jpg)](https://youtu.be/gV6hP9wpMW8) | [![After Video](https://img.youtube.com/vi/4Be3y6aTkdQ/0.jpg)](https://youtu.be/4Be3y6aTkdQ) |
-| *Minutes of raw footage.* | *60s High-retention viral clip.* |
 
 ---
 
