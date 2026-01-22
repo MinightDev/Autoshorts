@@ -1,7 +1,8 @@
-# ⚡ Monzed AutoShorts AI Playground
+# ⚡ Monzed AutoShorts AI Playground (v1.0.0)
 
-### Industrial-Grade Video Generation Engine. Build Your Own Viral SaaS.
-**Autoshorts AI** transforms long videos into engaging viral shorts using the power of artificial intelligence. It analyzes video content, identifying key topics or moments likely to interest viewers, and automatically generates shorts with professional effects, animations, captions, face tracking, and music.
+### **Industrial-Grade Video Generation Engine. Build Your Own Viral SaaS.**
+
+**AutoShorts AI** transforms raw, long-form content into high-impact viral shorts. This repository provides the complete source code for our interactive playground, designed to help founders and developers master the Monzed API, fine-tune visual presets, and prototype viral content strategies in real-time.
 
 ---
 
@@ -13,33 +14,18 @@
 
 ## 📽️ The Transformation: Raw vs Viral
 
-Experience the transformation quality. Our AI doesn't just cut—it curates, reframes, and enhances.
+Our AI doesn't just clip—it curates, reframes, and enhances. The playground demonstrates the engine's ability to identify viral hooks and apply production-grade effects automatically.
 
-### ⚡ Featured Transformation
-| 🔴 SOURCE (UNEDITED) | 🟢 RESULT (OPTIMIZED) |
+| 🔴 SOURCE 2 hours (UNEDITED) | 🟢 AI RESULT 60 seconds (Face Tracking, Captions, Background Music, Fade In & Fade Out) |
 |:---:|:---:|
-| [![Before Video](https://img.youtube.com/vi/8JoTw_JuE78/0.jpg)](https://youtu.be/8JoTw_JuE78) | [![After Video](https://img.youtube.com/vi/O6bcEQ0UGHg/0.jpg)](https://youtu.be/O6bcEQ0UGHg) |
-| *Original technical lecture.* | *High-impact viral short.* |
-
-### 🚀 Additional Examples
-| 🔴 SOURCE (UNEDITED) | 🟢 RESULT (OPTIMIZED) |
-|:---:|:---:|
-| [![Before Video](https://img.youtube.com/vi/gV6hP9wpMW8/0.jpg)](https://youtu.be/gV6hP9wpMW8) | [![After Video](https://img.youtube.com/vi/4Be3y6aTkdQ/0.jpg)](https://youtu.be/4Be3y6aTkdQ) |
+| [![Before Video](https://img.youtube.com/vi/Rni7Fz7208c/0.jpg)](https://youtu.be/Rni7Fz7208c) | [![After Video](https://img.youtube.com/vi/GoITUMxlwBI/0.jpg)](https://youtu.be/GoITUMxlwBI) |
+| *Original horizontal lecture.* | *Vertical short with AI face tracking.* |
 
 ---
 
-## 🏗️ Build Your SaaS on Monzed
+## 🏗️ Quick Installation
 
-This repository is more than a demo—it's a foundation. We provide the source code for this playground so you can:
-1. **Discover** how to interface with high-performance AI video infrastructure.
-2. **Build** your own unique frontend or Saas brand on top of our API.
-3. **Scale** instantly using our GPU clusters.
-
----
-
-## 🛠️ Quick Installation
-
-Deploy the playground locally in minutes:
+Deploy the playground locally to start prototyping your video SaaS:
 
 ### 1. Clone & Install
 ```bash
@@ -49,8 +35,9 @@ npm install
 ```
 
 ### 2. Configure Authentication
-Create a `.env` file in the root directory. You can get your key at [monzed.com/client/api](https://monzed.com/client/api).
+Create a `.env` file in the root directory. Get your production key at [monzed.com/client/api](https://monzed.com/client/api).
 ```env
+# Production API endpoint
 VITE_API_BASE_URL=https://api.monzed.com/autoshorts/v1
 ```
 
@@ -61,84 +48,66 @@ npm run dev
 
 ---
 
-## 📚 Comprehensive API Parameter Masterclass
+## 📚 Comprehensive API Masterclass (v1.0.0)
 
-The Monzed Engine is highly configurable. Below is an exhaustive list of every parameter you can send to the `/generate` endpoint.
+The Monzed Engine is highly configurable. The playground exposes these core objects:
 
-### 1. Core Logic (`VideoConfig`)
-These settings define the structural output of your video.
+### ⚙️ 1. Core Config (`config`)
+| Parameter | Type | Default | Description |
+|:---:|:---:|:---:|---|
+| `resolution` | `string` | `1080p` | `1080p` (HD) or `720p`. `4k` is exclusive to the **Agency Plan**. |
+| `clips_count` | `number` | `3` | Total viral segments the AI will attempt to extract. |
+| `min_duration` | `number` | `15` | Minimum length (seconds) for each clip. |
+| `max_duration` | `number` | `60` | Maximum length (seconds) for each clip. |
+| `quality_preset`| `string` | `balanced` | `balanced` (Fast/8Mbps) vs `best` (Pro/20Mbps). |
+| `hardware` | `string` | `cpu` | `cpu` (Shared) vs `gpu` (NVIDIA T4 Clusters - 10x faster). |
 
-| Parameter | Type | Description |
-|:---:|:---:|---|
-| `resolution` | `string` | `1080p` (1080x1920) or `720p` (720x1280). Highly recommended to use 1080p for TikTok/Reels. |
-| `clips_count` | `number` | The number of segments the AI should attempt to extract (1-10 suggested). |
-| `min_duration` | `number` | Minimum length of each clip in seconds. |
-| `max_duration` | `number` | Maximum length of each clip in seconds. |
-| `quality_preset`| `string` | `balanced` (Fast) or `best` (Higher bitrate, multi-pass encoding). |
-| `hardware` | `string` | `cpu` (Standard) or `gpu` (**NVIDIA T4**). GPU mode enables 10x faster encoding. |
+### 📝 2. AI Content Focus (`content`)
+| Parameter | Type | Default | Description |
+|:---:|:---:|:---:|---|
+| `prompt_style` | `string` | `viral_hook` | AI Persona: `viral_hook`, `storytelling`, `educational`, `funny`, `news`, etc. |
+| `custom_prompt` | `string` | `null` | Direct surgical instructions (e.g., *"Focus on technical jokes"*). |
+| `language` | `string` | `auto` | Source language. Use `auto` for Whispher-based detection. |
 
-### 2. Content Strategy (`ContentConfig`)
-Control what the AI looks for and how it frames the narrative.
+### 💬 3. Subtitle retention (`captions`)
+*   **Animations:** `pop`, `bounce`, `fade`, `glow`, `highlight`, `word_box`, `karaoke`, `typewriter`.
+*   **Design:** Full control over `font`, `fontsize`, `color`, `stroke_width`, and `words_per_caption`.
+*   **Position:** Precise control with `position` (top/center/bottom) plus `position_x`/`position_y` offsets.
 
-| Parameter | Type | Description |
-|:---:|:---:|---|
-| `prompt_style` | `string` | AI Persona: `viral_hook`, `storytelling`, `educational`, `funny`, `inspirational`, etc. |
-| `custom_prompt` | `string` | (Optional) Direct instructions to the AI on what specific topics to clip. |
-| `language` | `string` | Source language code (e.g., `en`, `es`, `fr`). Use `auto` for AI detection. |
+### 🎨 4. Visual Intensity (`visuals`)
+*   **AI Face Tracking:**centers the speaker even in multi-person videos.
+*   **Cinematic Effects:** Apply filters like `glitch`, `vignette`, `vintage`, `soft_glow`, `slow_zoom_in`, and more.
 
-### 3. Caption Design (`CaptionConfig`)
-Captions are the most critical element for social media retention.
-
-*   **`animation`**:
-    *   `word_box`: Dynamic box surrounding the active word.
-    *   `highlight`: Active word changes color.
-    *   `karaoke`: Progressive reveal of words.
-    *   `glow`: Soft glow transition on text.
-*   **`font`**: Choose from premium fonts like *Inter, Montserrat, Roboto, or Impact*.
-*   **`cadence`**: (`words_per_caption`) 1-5 words. Lower values = faster, high-energy reading.
-*   **`styling`**: Control `color`, `stroke_color`, `stroke_width`, `bold`, and `italic`.
-*   **`positioning`**:
-    *   `top`, `center`, `bottom`.
-    *   `position_x` / `position_y`: Custom pixel offsets for precise branding.
-
-### 4. Visual Intelligence (`VisualConfig`)
-*   **`face_tracking`**: (Boolean) Our proprietary AI specifically centers the speaker's face even if they move within the original wide-angle frame.
-*   **`crop_strategy`**: `smart_center` (AI-driven) vs `center` (Fixed).
-*   **`effects`**: Array of cinematic filters:
-    *   `glitch`, `shake`, `vignette`, `vintage`, `soft_glow`, `slow_zoom_in`.
-
-### 5. Professional Audio (`AudioConfig`)
-*   **`voiceover_volume`**: Boost or normalize original speaker audio.
-*   **`background_music`**:
-    *   **`source_url`**: Audio link (.mp3) or set to **`"auto"`** to let AI choose music based on content vibe.
-    *   `volume`: 0.0 to 1.0 (Auto-ducking is enabled by default).
-    *   `loop`: Seamless looping of tracks.
-*   > [!IMPORTANT]
-    > **Audio Limit**: For system stability, all background audio downloads (YouTube or Direct) are restricted to a maximum duration of **10 minutes**. Tracks exceeding this will be rejected.
-
-### 6. Integration Features
-*   **`webhook_url`**: Receive a JSON POST payload when the job is done. Perfect for building automated SaaS pipelines.
+### 🎵 5. Professional Audio (`audio`)
+*   **AI Music selection:** Set `source_url` to **`"auto"`** to let the engine choose music matching your content's vibe.
+*   **Normalization:** Master speaker volume is normalized; background music utilizes auto-ducking to ensure clarity.
 
 ---
 
-## 🚀 Scaling to Production
+## 📊 Credits & The "Fair Usage" Formula
 
-When you are ready to take your app live:
-1.  **Production Credits**: Purchase credits at [monzed.com/client/api](https://monzed.com/client/api).
-2.  **Custom Features**: Contact us if you need custom features or specific configurations added for your use case.
+Monzed protects your SaaS margins with a predictable, transparent credit system:
+
+**`Job Cost = (Clips × 5) + ceil(Source Minutes ÷ 10)`**
+
+| Scenario | Duration | Clips Requested | Total Credits |
+|:---|:---:|:---:|:---:|
+| **TikTok Starter** | 10 min | 3 Clips | **16 Credits** |
+| **Podcast Deep Dive** | 60 min | 1 Clip | **11 Credits** |
+| **Industrial Scale** | 120 min | 5 Clips | **37 Credits** |
 
 ---
 
-## ⚖️ Legal & Copyright
+## 📟 Security & Best Practices
+
+- **401 Unauthorized**: Ensure your `mk_live_...` key is valid and has not expired.
+- **402 Payment Required**: Credits are deducted **atomically** based on the duration check. Insufficient balance will reject the job instantly.
+- **Permanent Access**: S3 links expire. Always use the `/download/{job_id}/{clip_id}` proxy endpoint in your production apps for permanent video availability.
+
+---
+
+### [🔗 Official API Documentation & Reference](https://api.monzed.com/autoshorts/v1/docs)
 
 **Copyright © Monzed.**
-
-This source code is provided under an **Open Discovery License**. You are free to explore, debug, and build applications on top of the Monzed AutoShorts API. This repo is designed to be a transparent guide for developers.
-
-*   **Support & Discord**: [monzed.com/support](https://monzed.com/support)
-*   **Business Inquiries**: [team@monzed.com](mailto:team@monzed.com)
-*   **Contact Sales**: [monzed.com/products](https://monzed.com/products)
-
----
-
-### [🔗 Official API Documentation & Reference](https://monzed.com/apis/autoshorts)
+Built for the next generation of content creators and SaaS founders.
+MIT License - See [LICENSE](LICENSE) for details.
