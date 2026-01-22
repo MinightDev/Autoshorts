@@ -106,7 +106,7 @@ Monzed protects your SaaS margins with a predictable, transparent credit system:
 
 ---
 
-### [🔗 Official API Documentation & Reference](https://api.monzed.com/autoshorts/v1/docs)
+### [🔗 Official API Documentation & Reference](https://monzed.com/apis/autoshorts
 
 **Copyright © Monzed.**
 Built for the next generation of content creators and SaaS founders.
